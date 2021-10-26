@@ -8,22 +8,38 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    
+   var presenter : SplashPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
 
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        
+        presenter?.onViewDidAppear()
+        
+        if UserDefaults.standard.bool(forKey: "isLoged"){
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
+            newViewController.modalPresentationStyle = .fullScreen
+            
+        } else {
+                
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+            newViewController.modalPresentationStyle = .fullScreen
+            
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+extension SplashViewController: SplashViewProtocol{}
+

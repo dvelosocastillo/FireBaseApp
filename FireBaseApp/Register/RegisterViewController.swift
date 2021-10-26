@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -27,7 +28,26 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButton(_ sender: UIButton) {
         
         
+            
+        if let mail = emailTextField.text, let pass = passwordTextField.text {
+            
+            
+            Auth.auth().createUser(withEmail: mail, password: pass) { result, error in
+                
+                if let e = error {
+                    print(e.localizedDescription)
+                    
+                } else {
+                    
+                    self.dismiss(animated: true, completion: nil)
+                    
+                    }
+            
+        }
+        
     }
+    
+}
     
     @IBAction func backButton(_ sender: UIButton) {
         
@@ -35,3 +55,4 @@ class RegisterViewController: UIViewController {
     }
     
 }
+

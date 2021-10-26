@@ -6,24 +6,39 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
+    
+    @IBOutlet weak var userMail: UILabel!
+    
 
     override func viewDidLoad() {
+        
+        let userEmail = Auth.auth().currentUser?.email
+        
+        userMail.text = userEmail
+        
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButton(_ sender: UIButton) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
+        print("Usuario DesLogeado")
+        dismiss(animated: true, completion: nil)
+        
+        UserDefaults.standard.setValue(false, forKey: "isLoged")
+        
     }
-    */
-
+    
 }
