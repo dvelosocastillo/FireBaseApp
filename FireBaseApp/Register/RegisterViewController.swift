@@ -9,27 +9,23 @@ import UIKit
 import FirebaseAuth
 
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var emailConfirmTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var passwordConfirmTextField: UITextField!
+    
+    var presenter: RegisterPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func registerButton(_ sender: UIButton) {
         
-        
-            
         if let mail = emailTextField.text, let pass = passwordTextField.text {
+            
+            presenter?.onRegisterButtonPressed(user: mail, pass: pass)
             
             
             Auth.auth().createUser(withEmail: mail, password: pass) { result, error in
@@ -51,7 +47,9 @@ class RegisterViewController: UIViewController {
     
     @IBAction func backButton(_ sender: UIButton) {
         
-        dismiss(animated: true, completion: nil)
+        presenter?.onBackButtonPressed()
+        
+        
     }
     
 }

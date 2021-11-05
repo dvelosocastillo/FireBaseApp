@@ -20,7 +20,7 @@ class SplashPresenter: SplashPresenterProtocol {
 
 }
 
-extension SplashPresenter: SplashInteractorOuputProtocol {
+extension SplashPresenter: SplashInteractorOutputProtocol {
     
     func whenUserIsLoged() {
         router?.goToMain()
@@ -29,8 +29,5 @@ extension SplashPresenter: SplashInteractorOuputProtocol {
     func whenUserIsNotLoged() {
         router?.goToLogin()
     }
-    
-    
-    
     
 }

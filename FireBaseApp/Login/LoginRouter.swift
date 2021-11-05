@@ -1,23 +1,23 @@
 //
-//  SplashRouter.swift
+//  LoginRouter.swift
 //  FireBaseApp
 //
-//  Created by daniel veloso on 26-10-21.
+//  Created by daniel veloso on 02-11-21.
 //
 
 import Foundation
 import UIKit
 
-class SplashRouter: SplashRouterProtocol{
+class LoginRouter: LoginRouterProtocol{
     
     var viewController: UIViewController?
     
-    static func creteModule() -> SplashViewController {
+    static func creteModule() -> LoginViewController {
         
-        let view = SplashViewController.storyboardViewController()
-        let interactor = SplashInteractor()
-        let presenter = SplashPresenter()
-        let router = SplashRouter()
+        let view = LoginViewController.storyboardViewController()
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter()
+        let router = LoginRouter()
         
         view.presenter = presenter
         interactor.interactorOutput = presenter
@@ -38,16 +38,19 @@ class SplashRouter: SplashRouterProtocol{
         newViewController.modalPresentationStyle = .fullScreen
         
         viewController?.present(newViewController, animated: true, completion: nil)
+        
+        
     }
     
-    func goToLogin() {
+    func goToRegister() {
         
-        let newViewController = LoginRouter.creteModule()
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Register", bundle: nil)
+        
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "registerViewController") as! RegisterViewController
         
         newViewController.modalPresentationStyle = .fullScreen
         
         viewController?.present(newViewController, animated: true, completion: nil)
         
     }
-    
 }

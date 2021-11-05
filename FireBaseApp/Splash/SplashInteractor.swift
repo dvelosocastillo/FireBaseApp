@@ -9,7 +9,7 @@ import Foundation
 
 class SplashInteractor: SplashInteractorProtocol{
     
-    var interactorOutput : SplashInteractorOuputProtocol?
+    var interactorOutput : SplashInteractorOutputProtocol?
     
     func userIsLoged() {
         

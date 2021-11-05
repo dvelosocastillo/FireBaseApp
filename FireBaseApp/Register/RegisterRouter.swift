@@ -1,23 +1,23 @@
 //
-//  SplashRouter.swift
+//  RegisterRouter.swift
 //  FireBaseApp
 //
-//  Created by daniel veloso on 26-10-21.
+//  Created by daniel veloso on 04-11-21.
 //
 
 import Foundation
 import UIKit
 
-class SplashRouter: SplashRouterProtocol{
+class RegisterRouter: RegisterRouterProtocol{
     
     var viewController: UIViewController?
     
-    static func creteModule() -> SplashViewController {
+    static func creteModule() -> RegisterViewController {
         
-        let view = SplashViewController.storyboardViewController()
-        let interactor = SplashInteractor()
-        let presenter = SplashPresenter()
-        let router = SplashRouter()
+        let view = RegisterViewController.storyboardViewController()
+        let interactor = RegisterInteractor()
+        let presenter = RegisterPresenter()
+        let router = RegisterRouter()
         
         view.presenter = presenter
         interactor.interactorOutput = presenter

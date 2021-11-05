@@ -22,7 +22,7 @@ protocol SplashInteractorProtocol: AnyObject {
     
 }
 
-protocol SplashInteractorOuputProtocol: AnyObject {
+protocol SplashInteractorOutputProtocol: AnyObject {
     
     func whenUserIsLoged()
     func whenUserIsNotLoged()

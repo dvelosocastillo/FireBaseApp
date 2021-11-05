@@ -20,22 +20,6 @@ class SplashViewController: UIViewController {
         
         presenter?.onViewDidAppear()
         
-        if UserDefaults.standard.bool(forKey: "isLoged"){
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
-            newViewController.modalPresentationStyle = .fullScreen
-            
-        } else {
-                
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
-            newViewController.modalPresentationStyle = .fullScreen
-            
-        }
-        
     }
     
 }
