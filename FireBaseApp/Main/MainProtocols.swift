@@ -7,25 +7,24 @@
 
 import Foundation
 
-protocol MainViewControllProtocol {}
+protocol MainViewControllerProtocol {}
 
 protocol MainPresenterProtocol {
     
-    func onViewDidAppear ()
-    func onBackButtonPressed ()
+    func onViewDidAppear()
+    func onBackButtonPressed()
     
 }
 
 protocol MainInteractorProtocol {
     
-    func showUsersEmail ()
-     
+    func getUserEmail()
+    func logoutUser()
 }
 
 protocol MainOutputInteractorProtocol {
     
-    func logoutUser ()
-    func showUserEmail ()
+    func onGetUserEmailDone(with email: String)
     
 }
 

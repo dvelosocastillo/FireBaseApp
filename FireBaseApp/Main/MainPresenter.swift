@@ -6,3 +6,31 @@
 //
 
 import Foundation
+
+class MainPresenter: MainPresenterProtocol {
+    
+    var interactor: MainInteractorProtocol?
+    var view: MainViewControllerProtocol?
+    
+    func onViewDidAppear() {
+        
+        interactor?.getUserEmail()
+        
+    }
+    
+    func onBackButtonPressed() {
+        
+        interactor?.logoutUser()
+        
+    }
+}
+
+extension MainPresenter: MainOutputInteractorProtocol {
+    
+    func onGetUserEmailDone(with email: String) {
+        
+        
+        
+    }
+    
+}
