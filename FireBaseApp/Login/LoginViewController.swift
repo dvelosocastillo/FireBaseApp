@@ -33,29 +33,6 @@ class LoginViewController: UIViewController {
             presenter?.onLoginButtonPressed(user: mail, pass: pass)
             
         }
-//        if let mail = emailTextField.text, let pass = passwordTextField.text {
-//
-//
-//            Auth.auth().signIn(withEmail: mail, password: pass) { result, error in
-//
-//                if let e = error {
-//                    print(e.localizedDescription)
-//
-//                } else {
-//
-//
-//
-//                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
-//                    newViewController.modalPresentationStyle = .fullScreen
-//
-//                    UserDefaults.standard.setValue(true, forKey: "isLoged")
-//
-//                    self.present(newViewController, animated: true, completion: nil)                }
-//            }
-//
-//        }
         
     }
     

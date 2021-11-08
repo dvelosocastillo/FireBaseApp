@@ -31,10 +31,8 @@ class RegisterRouter: RegisterRouterProtocol{
     
     func goToMain() {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = MainRouter.creteModule()
         
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
-    
         newViewController.modalPresentationStyle = .fullScreen
         
         viewController?.present(newViewController, animated: true, completion: nil)

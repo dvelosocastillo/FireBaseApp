@@ -25,7 +25,6 @@
 		85B72A63273464A300137145 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B72A62273464A300137145 /* RegisterInteractor.swift */; };
 		85B72A65273464BB00137145 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B72A64273464BB00137145 /* RegisterRouter.swift */; };
 		85D84AC6271DEC6E00E74315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D84AC5271DEC6E00E74315 /* AppDelegate.swift */; };
-		85D84AC8271DEC6E00E74315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D84AC7271DEC6E00E74315 /* SceneDelegate.swift */; };
 		85D84ACF271DEC7300E74315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D84ACE271DEC7300E74315 /* Assets.xcassets */; };
 		85D84AD2271DEC7300E74315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D84AD0271DEC7300E74315 /* LaunchScreen.storyboard */; };
 		85D84ADE271DED0E00E74315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D84ADD271DED0E00E74315 /* Main.storyboard */; };
@@ -62,7 +61,6 @@
 		85B72A64273464BB00137145 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
 		85D84AC2271DEC6E00E74315 /* FireBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D84AC5271DEC6E00E74315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85D84AC7271DEC6E00E74315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85D84ACE271DEC7300E74315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D84AD1271DEC7300E74315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85D84AD3271DEC7300E74315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			children = (
 				85460DA12729DD4B00452090 /* Utils */,
 				85D84AC5271DEC6E00E74315 /* AppDelegate.swift */,
-				85D84AC7271DEC6E00E74315 /* SceneDelegate.swift */,
 				85D84ADC271DECE200E74315 /* Register */,
 				85D84AD9271DECA900E74315 /* Splash */,
 				85D84ADB271DECC800E74315 /* Login */,
@@ -339,7 +336,6 @@
 				85460D982728969100452090 /* SplashProtocols.swift in Sources */,
 				85B72A612734649200137145 /* RegisterPresenter.swift in Sources */,
 				857772AD2731C28500838AA7 /* LoginProtocols.swift in Sources */,
-				85D84AC8271DEC6E00E74315 /* SceneDelegate.swift in Sources */,
 				85B72A63273464A300137145 /* RegisterInteractor.swift in Sources */,
 				85B72A65273464BB00137145 /* RegisterRouter.swift in Sources */,
 				85D84AE0271DED2300E74315 /* MainViewController.swift in Sources */,

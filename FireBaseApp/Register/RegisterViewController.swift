@@ -27,20 +27,6 @@ class RegisterViewController: UIViewController {
             
             presenter?.onRegisterButtonPressed(user: mail, pass: pass)
             
-            
-            Auth.auth().createUser(withEmail: mail, password: pass) { result, error in
-                
-                if let e = error {
-                    print(e.localizedDescription)
-                    
-                } else {
-                    
-                    self.dismiss(animated: true, completion: nil)
-                    
-                    }
-            
-        }
-        
     }
     
 }

@@ -20,9 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.makeKeyAndVisible()
         let vc = SplashRouter.creteModule()
         window?.rootViewController = vc
+        window?.makeKeyAndVisible()
         
     }
 

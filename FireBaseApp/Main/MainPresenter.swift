@@ -11,6 +11,7 @@ class MainPresenter: MainPresenterProtocol {
     
     var interactor: MainInteractorProtocol?
     var view: MainViewControllerProtocol?
+    var router: MainRouterProtocol?
     
     func onViewDidAppear() {
         

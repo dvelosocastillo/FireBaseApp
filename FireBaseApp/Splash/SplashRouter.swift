@@ -31,9 +31,7 @@ class SplashRouter: SplashRouterProtocol{
     
     func goToMain() {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
+        let newViewController = MainRouter.creteModule()
         
         newViewController.modalPresentationStyle = .fullScreen
         

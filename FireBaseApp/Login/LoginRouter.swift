@@ -31,9 +31,7 @@ class LoginRouter: LoginRouterProtocol{
     
     func goToMain() {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
+        let newViewController = MainRouter.creteModule()
         
         newViewController.modalPresentationStyle = .fullScreen
         
@@ -44,9 +42,7 @@ class LoginRouter: LoginRouterProtocol{
     
     func goToRegister() {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Register", bundle: nil)
-        
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "registerViewController") as! RegisterViewController
+        let newViewController = RegisterRouter.creteModule()
         
         newViewController.modalPresentationStyle = .fullScreen
         
