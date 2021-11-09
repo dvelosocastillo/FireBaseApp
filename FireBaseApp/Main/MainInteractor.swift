@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class MainInteractor: MainInteractorProtocol {
     
-    var interactorOutput: MainOutputInteractorProtocol?
+    var interactorOutput: MainInteractorOutputProtocol?
     
     func getUserEmail() {
         
@@ -20,7 +20,7 @@ class MainInteractor: MainInteractorProtocol {
             
         } else {
             
-            //
+            interactorOutput?.onGetUserEmailFail()
             
         }
         
@@ -34,8 +34,10 @@ class MainInteractor: MainInteractorProtocol {
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
-        print("Usuario DesLogeado")
+        print("User Logout")
         UserDefaults.standard.setValue(false, forKey: "isLoged")
+        
+        interactorOutput?.onLogOut()
         
     }
     

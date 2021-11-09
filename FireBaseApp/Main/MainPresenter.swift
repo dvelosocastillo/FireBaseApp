@@ -9,8 +9,9 @@ import Foundation
 
 class MainPresenter: MainPresenterProtocol {
     
+    
     var interactor: MainInteractorProtocol?
-    var view: MainViewControllerProtocol?
+    var view: MainViewProtocol?
     var router: MainRouterProtocol?
     
     func onViewDidAppear() {
@@ -22,16 +23,24 @@ class MainPresenter: MainPresenterProtocol {
     func onBackButtonPressed() {
         
         interactor?.logoutUser()
-        
+    
     }
+    
 }
 
-extension MainPresenter: MainOutputInteractorProtocol {
+extension MainPresenter: MainInteractorOutputProtocol{
     
-    func onGetUserEmailDone(with email: String) {
+    func onGetUserEmailDone(with userEmail: String) {
         
+        view?.set(email: userEmail)
+    }
+    func onGetUserEmailFail() {
         
+        //
+    }
+    func onLogOut() {
         
+        router?.goToLogin()
     }
     
 }

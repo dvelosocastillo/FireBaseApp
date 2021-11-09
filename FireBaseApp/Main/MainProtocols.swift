@@ -8,15 +8,16 @@
 import Foundation
 import UIKit
 
-protocol MainViewProtocol {}
-
-protocol MainViewControllerProtocol {}
+protocol MainViewProtocol {
+    
+    func set(email: String)
+    
+}
 
 protocol MainPresenterProtocol {
     
     func onViewDidAppear()
     func onBackButtonPressed()
-    
 }
 
 protocol MainInteractorProtocol {
@@ -25,9 +26,11 @@ protocol MainInteractorProtocol {
     func logoutUser()
 }
 
-protocol MainOutputInteractorProtocol {
+protocol MainInteractorOutputProtocol {
     
     func onGetUserEmailDone(with email: String)
+    func onGetUserEmailFail()
+    func onLogOut()
     
 }
 

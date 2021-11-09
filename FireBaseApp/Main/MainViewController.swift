@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
 
         presenter?.onViewDidAppear()
-      
+        
     }
 
     @IBAction func backButton(_ sender: UIButton) {
@@ -26,4 +26,12 @@ class MainViewController: UIViewController {
         
     }
     
+}
+extension MainViewController: MainViewProtocol {
+    
+    func set(email: String) {
+        
+        userMail.text = email
+        
+    }
 }

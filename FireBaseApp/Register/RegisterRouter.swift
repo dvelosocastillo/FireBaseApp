@@ -31,20 +31,12 @@ class RegisterRouter: RegisterRouterProtocol{
     
     func goToMain() {
         
-        let newViewController = MainRouter.creteModule()
-        
-        newViewController.modalPresentationStyle = .fullScreen
-        
-        viewController?.present(newViewController, animated: true, completion: nil)
+        viewController?.dismiss(animated: true)
     }
     
     func goToLogin() {
         
-        let newViewController = LoginRouter.creteModule()
-        
-        newViewController.modalPresentationStyle = .fullScreen
-        
-        viewController?.present(newViewController, animated: true, completion: nil)
+        viewController?.dismiss(animated: true)
         
     }
     

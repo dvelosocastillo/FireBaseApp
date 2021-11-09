@@ -18,24 +18,22 @@ class MainRouter: MainRouterProtocol{
             let interactor = MainInteractor()
             let presenter = MainPresenter()
             let router = MainRouter()
-            
+
             view.presenter = presenter
             interactor.interactorOutput = presenter
             presenter.interactor = interactor
             presenter.router = router
+            presenter.view = view
             router.viewController = view
-            
+        
+        
             return view
         
     }
     
     func goToLogin() {
         
-        let newViewController = LoginRouter.creteModule()
-        
-        newViewController.modalPresentationStyle = .fullScreen
-        
-        viewController?.present(newViewController, animated: true, completion: nil)
+        viewController?.dismiss(animated: true)
         
     }
 }

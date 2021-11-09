@@ -31,12 +31,7 @@ class LoginRouter: LoginRouterProtocol{
     
     func goToMain() {
         
-        let newViewController = MainRouter.creteModule()
-        
-        newViewController.modalPresentationStyle = .fullScreen
-        
-        viewController?.present(newViewController, animated: true, completion: nil)
-        
+        viewController?.dismiss(animated: true)
         
     }
     

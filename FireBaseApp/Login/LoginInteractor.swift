@@ -25,7 +25,7 @@ class LoginInteractor: LoginInteractorProtocol{
             } else {
                 
                 print("Funciona")
-                
+                UserDefaults.standard.setValue(true, forKey: "isLoged")
                 self.interactorOutput?.whenLoginSuccess()
             
                 

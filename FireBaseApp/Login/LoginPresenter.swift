@@ -12,6 +12,7 @@ class LoginPresenter: LoginPresenterProtocol {
     var router: LoginRouterProtocol?
     var interactor: LoginInteractorProtocol?
     
+    
     func onLoginButtonPressed(user: String, pass: String) {
         
         interactor?.performLogin(user: user, pass: pass)
@@ -22,6 +23,8 @@ class LoginPresenter: LoginPresenterProtocol {
         
         router?.goToRegister()
     }
+    
+
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol{
